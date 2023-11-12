@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&family=Open+Sans:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('blocks.css') all;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 :root {
@@ -17,6 +24,7 @@
 .container header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: var(--color-dark-gray);
     padding: 10px 30px;
 }
@@ -29,18 +37,18 @@
     color: var(--color-white);
 }
 .container header .title img {
-    width: 50px;
+    width: 30px;
     border-radius: 50%;
 }
 .container header .title h1 {
     margin-left: 15px;
+    font-size: 25px;
 }
 
 /*barra de navegacion*/
 .container header .nav ul {
     display: flex;
     align-items: center;
-    height: 100%;
 }
 .container header .nav li>.line::before {
     content: "";
@@ -53,13 +61,37 @@
     list-style: none;
     height: 100%;
     align-items: center;
+    position: relative;
 }
 .container header .nav li a {
     text-decoration: none;
     color: var(--color-white);
     padding: 10px;
 }
+.container header .nav li a:hover {
+    background-color: #B7AEA5;
+}
 
+.container header .nav .nav-navSecundary {
+    flex-direction: column;
+    justify-content: center;
+}
+.container header .nav .nav-navSecundary a:not(:only-child):after {
+    padding-left: 5px;
+    content: ' ▾';
+}
 .container header .nav .navBarSecundary {
+    width: 190px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--color-dark-gray);
     display: none;
+}
+.container header .nav .navBarSecundary li {
+    display: block;
+}
+.container header .nav .navBarSecundary a {
+    display: block;
 }
