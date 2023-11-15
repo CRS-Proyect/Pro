@@ -15,6 +15,9 @@
     padding: 20px;
 }
 
+.block-info {
+    margin: 20px 0;
+}
 .block-info-title {
     font-size: 18px;
 }
@@ -85,6 +88,10 @@
     justify-content: flex-end;
 }
 
+.align-item-end {
+    align-items: flex-end;
+}
+
 /*display grid*/
 .d-grid {
     display: grid;
@@ -112,14 +119,27 @@
 }
 
 /*margin*/
+.m1 {
+    margin: 10px;
+}
+.mx1 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.my1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .m2 {
     margin: 20px;
 }
 .mx2 {
-    margin: 0 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .my2 {
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /*padding*/
